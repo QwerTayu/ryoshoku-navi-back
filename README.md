@@ -17,4 +17,12 @@ http://localhost:5001/ryoshoku-navi-app/us-central1/
 デプロイ
 ```
  firebase deploy --only functions
- 
+```
+
+
+デプロイ先
+```
+https://helloworld-2ufsha4fmq-uc.a.run.app/helloworld
+```
+
+など
