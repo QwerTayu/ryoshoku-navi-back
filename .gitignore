@@ -1,0 +1,7 @@
+node_modules/
+
+# firebase関連の作業ログ
+.firebaserc
+firebase-debug.1.log
+firebase-debug.log
+ui-debug.log
