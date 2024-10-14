@@ -46,80 +46,84 @@ $ firebase functions:config:set line.channel_access_token="channelAccessToken"
 リッチメニュー
 ```
 curl -v -X POST https://api.line.me/v2/bot/richmenu -H 'Authorization: Bearer {チャンネルアクセストークン}' -H 'Content-Type: application/json' -d '{
-    "size": {
-      "width": 2500,
-      "height": 1686
-    },
-    "selected": false,
-    "name": "MENU",
-    "chatBarText": "Tap here",
-    "areas": [
-      {
-        "bounds": {
-          "x": 0,
-          "y": 0,
-          "width": 833,
-          "height": 843
-        },
-        "action": {
-          "type": "postback",
-          "data": "pien"
-        }
+  "size": {
+    "width": 2500,
+    "height": 1686
+  },
+  "selected": false,
+  "name": "MENU",
+  "chatBarText": "Tap here",
+  "areas": [
+    {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 833,
+        "height": 843
       },
-      {
-        "bounds": {
-          "x": 834,
-          "y": 0,
-          "width": 1666,
-          "height": 843
-        },
-        "action": {
-          "type": "postback",
-          "data": "RECORD"
-        }
-      },
-      {
-        "bounds": {
-          "x": 0,
-          "y": 844,
-          "width": 833,
-          "height": 843
-        },
-        "action": {
-          "type": "postback",
-          "data": "MENU"
-        }
-      },
-      {
-        "bounds": {
-          "x": 834,
-          "y": 844,
-          "width": 833,
-          "height": 843
-        },
-        "action": {
-          "type": "postback",
-          "data": "CHECK"
-        }
-      },
-      {
-        "bounds": {
-          "x": 1668,
-          "y": 844,
-          "width": 833,
-          "height": 843
-        },
-        "action": {
-          "type": "postback",
-          "data": "SETTING"
-        }
+      "action": {
+        "type": "postback",
+        "data": "pien"
       }
-    ]
+    },
+    {
+      "bounds": {
+        "x": 834,
+        "y": 0,
+        "width": 1666,
+        "height": 843
+      },
+      "action": {
+        "type": "uri",
+        "label": "RECORD",
+        "uri": "https://liff.line.me/2006407162-7BqJWK5k/record/"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 844,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "uri",
+        "label": "MENU",
+        "uri": "https://liff.line.me/2006407162-7BqJWK5k/menu/"
+      }
+    },
+    {
+      "bounds": {
+        "x": 834,
+        "y": 844,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "uri",
+        "label": "CHECK",
+        "uri": "https://liff.line.me/2006407162-7BqJWK5k/check/"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1668,
+        "y": 844,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "uri",
+        "label": "SETTING",
+        "uri": "https://liff.line.me/2006407162-7BqJWK5k/setting/"
+      }
+    }
+  ]
 }'
 ```
 
 ```
-curl --http1.1 -v -X POST https://api-data.line.me/v2/bot/richmenu/richmenu-リッチメニューアイディー/content -H 'Authorization: Bearer {チャンネルアクセストークン}' -H 'Content-Type: image/jpeg' -T richmenu.png
+curl --http1.1 -v -X POST https://api-data.line.me/v2/bot/richmenu/richmenu-リッチメニューアイディー/content -H 'Authorization: Bearer {チャンネルアクセストークン}' -H 'Content-Type: image/png' -T ./richmenu.png
 ```
 
 ```
